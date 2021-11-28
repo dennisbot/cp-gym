@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 using CpGymCsharp.interfaces;
 using CpGymCsharp.utils;
 
@@ -46,9 +47,10 @@ namespace CpGymCsharp.uva
             return true;
         }
 
-        public void Run(string fileLocation = "uva/10018")
+        public string FileLocation { get; set; } = "uva/10018";
+        public void Run()
         {
-            Runner.Run(fileLocation, () =>
+            Runner.Run(FileLocation, () =>
             {
                 int N = int.Parse(Console.ReadLine());
                 while (N-- > 0)

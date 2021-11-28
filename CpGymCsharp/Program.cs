@@ -1,4 +1,5 @@
 ﻿using CpGymCsharp.interfaces;
+using CpGymCsharp.leetcode;
 using CpGymCsharp.uva;
 
 namespace CpGymCsharp
@@ -7,8 +8,7 @@ namespace CpGymCsharp
     {
         static void Main()
         {
-            IProblem problem = ReverseAndAdd.Instance;
-            problem.Run();
+            DeciBinary.Instance.Run();
         }
     }
 }

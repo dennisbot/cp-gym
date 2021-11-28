@@ -2,6 +2,7 @@
 {
     public interface IProblem
     {
-        void Run(string fileLocation = "");
+        string FileLocation { get; set; }
+        void Run();
     }
 }
