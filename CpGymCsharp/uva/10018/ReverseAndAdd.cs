@@ -4,7 +4,7 @@ namespace CpGymCsharp.uva
 {
     public class ReverseAndAdd : BaseProblem
     {
-        static string Solve(uint number)
+        public static string Solve(uint number)
         {
             int iteration = 0;
             do
