@@ -1,9 +1,18 @@
 ﻿using System;
+using CpGymCsharp.interfaces;
+using CpGymCsharp.utils;
 
 namespace CpGymCsharp.uva
 {
-    public class ReverseAndAdd : BaseProblem
+    public class ReverseAndAdd : IProblem
     {
+        internal static readonly IProblem Instance;
+        private ReverseAndAdd() {}
+        static ReverseAndAdd()
+        {
+            Instance = new ReverseAndAdd();
+        }
+
         public static string Solve(uint number)
         {
             int iteration = 0;
@@ -37,15 +46,17 @@ namespace CpGymCsharp.uva
             return true;
         }
 
-        public override void Run(string fileLocation = "uva/10018")
+        public void Run(string fileLocation = "uva/10018")
         {
-            base.Run(fileLocation);
-            int N = int.Parse(Console.ReadLine());
-            while (N-- > 0)
+            Runner.Run(fileLocation, () =>
             {
-                uint number = uint.Parse(Console.ReadLine());
-                Console.WriteLine(Solve(number));
-            }
+                int N = int.Parse(Console.ReadLine());
+                while (N-- > 0)
+                {
+                    uint number = uint.Parse(Console.ReadLine());
+                    Console.WriteLine(Solve(number));
+                }
+            });
         }
     }
 }

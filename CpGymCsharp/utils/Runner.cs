@@ -2,12 +2,14 @@
 using System.IO;
 using static CpGymCsharp.utils.Constants;
 
-namespace CpGymCsharp
+namespace CpGymCsharp.utils
 {
-    public class BaseProblem
+    public static class Runner
     {
-        public virtual void Run(string fileLocation = "uva/10018")
+        public static void Run(string fileLocation, Action action)
         {
+            if (fileLocation is null)
+                throw new ArgumentNullException(nameof(fileLocation));
 #if DENNISBOT
             StreamReader streamReader = new StreamReader(Path.Combine(SolutionDir, fileLocation, "in.in"));
             StreamWriter streamWriter =
@@ -16,6 +18,7 @@ namespace CpGymCsharp
             Console.SetOut(streamWriter);
             Console.SetError(streamWriter);
 #endif
+            action();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using CpGymCsharp.uva;
+﻿using CpGymCsharp.interfaces;
+using CpGymCsharp.uva;
 
 namespace CpGymCsharp
 {
@@ -6,7 +7,8 @@ namespace CpGymCsharp
     {
         static void Main()
         {
-            (new ReverseAndAdd()).Run();
+            IProblem problem = ReverseAndAdd.Instance;
+            problem.Run();
         }
     }
 }
