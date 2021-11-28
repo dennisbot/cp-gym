@@ -5,6 +5,12 @@ namespace CpGymCsharp.leetcode
     public class DeciBinaryUnitTest
     {
         [Fact]
+        public void Test47()
+        {
+            Assert.Equal(7, DeciBinary.MinPartitions("47"));
+        }
+
+        [Fact]
         public void Test32()
         {
             Assert.Equal(3, DeciBinary.MinPartitions("32"));
