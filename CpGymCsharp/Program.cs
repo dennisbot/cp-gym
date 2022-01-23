@@ -18,8 +18,7 @@ namespace CpGymCsharp
         static void Main(string[] args)
         {
             // DeciBinary.Instance.Run(GetExtraPath(args));
-            // ReverseAndAdd.Instance.Run(GetExtraPath(args));
-            DistorsionAlfabeticaCircular.Instance.Run(GetExtraPath(args));
+            Spiderman.Instance.Run(GetExtraPath(args));
         }
     }
 }

@@ -10,7 +10,7 @@ namespace CpGymCsharp.utils
         {
             if (fileLocation is null)
                 throw new ArgumentNullException(nameof(fileLocation));
-#if DENNISBOT
+#if LOCAL
             StreamReader streamReader = new StreamReader(Path.Combine(SolutionDir, fileLocation, "in.in"));
             StreamWriter streamWriter =
                 new StreamWriter(Path.Combine(SolutionDir, fileLocation, "ou.out")) {AutoFlush = true};
