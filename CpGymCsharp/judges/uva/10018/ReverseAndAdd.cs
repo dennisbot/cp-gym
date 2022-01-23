@@ -48,7 +48,7 @@ namespace CpGymCsharp.judges.uva
 
         public void Run(string pathToAppend)
         {
-            string fileLocation = Helper.Combine(pathToAppend, "judges/uva/10018");
+            string fileLocation = Helper.PathCombine(pathToAppend, "judges/uva/10018");
             Runner.Run(fileLocation, () =>
             {
                 int N = int.Parse(Console.ReadLine()!);

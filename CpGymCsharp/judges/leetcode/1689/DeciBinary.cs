@@ -26,7 +26,7 @@ namespace CpGymCsharp.judges.leetcode
 
         public void Run(string pathToAppend)
         {
-            string fileLocation = Helper.Combine(pathToAppend, "judges/leetcode/1689");
+            string fileLocation = Helper.PathCombine(pathToAppend, "judges/leetcode/1689");
             Runner.Run(fileLocation, () =>
             {
                 int N = int.Parse(Console.ReadLine()!);

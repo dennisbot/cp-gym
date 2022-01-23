@@ -38,7 +38,7 @@ namespace CpGymCsharp.judges.codeforces
 
         public void Run(string pathToAppend)
         {
-            string fileLocation = Helper.Combine(pathToAppend, "judges/codeforces/365620");
+            string fileLocation = Helper.PathCombine(pathToAppend, "judges/codeforces/365620");
             Runner.Run(fileLocation, () =>
             {
                 int k = int.Parse(Console.ReadLine()!);

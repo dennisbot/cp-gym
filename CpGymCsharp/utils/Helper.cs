@@ -5,7 +5,7 @@ namespace CpGymCsharp.utils
 {
     public class Helper
     {
-        public static string Combine(params string[] path)
+        public static string PathCombine(params string[] path)
         {
             string fileLocation = Path.Combine(path);
             Console.WriteLine($"fileLocation = {fileLocation}");
