@@ -1,6 +1,6 @@
 ﻿using Xunit;
 
-namespace CpGymCsharp.uva
+namespace CpGymCsharp.judges.uva
 {
     public class ReverseAndAddUnitTest
     {

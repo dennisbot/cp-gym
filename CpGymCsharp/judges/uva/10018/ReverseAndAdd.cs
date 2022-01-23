@@ -1,13 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using CpGymCsharp.interfaces;
 using CpGymCsharp.utils;
 
-namespace CpGymCsharp.uva
+namespace CpGymCsharp.judges.uva
 {
-    public class ReverseAndAdd : IProblem
+    public class ReverseAndAdd : IBaseProblem
     {
-        internal static readonly IProblem Instance;
+        internal static readonly IBaseProblem Instance;
         private ReverseAndAdd() {}
         static ReverseAndAdd()
         {
@@ -47,15 +46,15 @@ namespace CpGymCsharp.uva
             return true;
         }
 
-        public string FileLocation { get; set; } = "uva/10018";
-        public void Run()
+        public void Run(string pathToAppend)
         {
-            Runner.Run(FileLocation, () =>
+            string fileLocation = Helper.Combine(pathToAppend, "judges/uva/10018");
+            Runner.Run(fileLocation, () =>
             {
-                int N = int.Parse(Console.ReadLine());
+                int N = int.Parse(Console.ReadLine()!);
                 while (N-- > 0)
                 {
-                    uint number = uint.Parse(Console.ReadLine());
+                    uint number = uint.Parse(Console.ReadLine()!);
                     Console.WriteLine(Solve(number));
                 }
             });

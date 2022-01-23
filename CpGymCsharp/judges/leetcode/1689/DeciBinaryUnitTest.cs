@@ -1,6 +1,6 @@
 ﻿using Xunit;
 
-namespace CpGymCsharp.leetcode
+namespace CpGymCsharp.judges.leetcode
 {
     public class DeciBinaryUnitTest
     {

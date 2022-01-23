@@ -2,11 +2,11 @@
 using CpGymCsharp.interfaces;
 using CpGymCsharp.utils;
 
-namespace CpGymCsharp.leetcode
+namespace CpGymCsharp.judges.leetcode
 {
-    public class DeciBinary : IProblem
+    public class DeciBinary : IBaseProblem
     {
-        internal static readonly IProblem Instance;
+        internal static readonly IBaseProblem Instance;
         private DeciBinary() {}
         static DeciBinary()
         {
@@ -24,12 +24,12 @@ namespace CpGymCsharp.leetcode
             return int.Parse(ans.ToString());
         }
 
-        public string FileLocation { get; set; } = "leetcode/1689";
-        public void Run()
+        public void Run(string pathToAppend)
         {
-            Runner.Run(FileLocation, () =>
+            string fileLocation = Helper.Combine(pathToAppend, "judges/leetcode/1689");
+            Runner.Run(fileLocation, () =>
             {
-                int N = int.Parse(Console.ReadLine());
+                int N = int.Parse(Console.ReadLine()!);
                 while (N-- > 0)
                 {
                     string number = Console.ReadLine();
